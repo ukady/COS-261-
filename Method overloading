@@ -1,0 +1,23 @@
+public class Main {
+	public static void main(String[] args) {
+		class Person {
+    String name = "Mr. Alec";
+
+    void speak() {
+        System.out.println("I am"  + name);
+    }
+}
+
+class Teacher extends Person {
+    void teach() {
+        System.out.println("Teaching...");
+
+        Teacher t = new Teacher();
+        t.name = "MrAlec";
+        t.speak();
+        t.teach();
+    }
+}
+
+	}
+}
