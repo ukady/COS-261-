@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class CGPACalculator {
+
+    
+    public static int getGradePoint(String grade) {
+        if (grade.equalsIgnoreCase("A")) {
+            return 5;
+        } else if (grade.equalsIgnoreCase("B")) {
+            return 4;
+        } else if (grade.equalsIgnoreCase("C")) {
+            return 3;
+        } else if (grade.equalsIgnoreCase("D")) {
+            return 2;
+        } else if (grade.equalsIgnoreCase("E")) {
+            return 1;
+        } else if (grade.equalsIgnoreCase("F")) {
+            return 0;
+        } else {
+            return -1; 
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter number of subjects: ");
+        int numSubjects = scanner.nextInt();
+
+        int totalPoints = 0;
+
+        for (int i = 1; i <= numSubjects; i++) {
+            System.out.print("Enter letter grade for subject " + i + " (A-F): ");
+            String grade = scanner.next();
+
+            int point = getGradePoint(grade);
+
+            if (point == -1) {
+                System.out.println("Invalid grade entered. Please use only A-F.");
+                i--; 
+                continue;
+            }
+
+            totalPoints += point;
+        }
+
+        double cgpa = (double) totalPoints / numSubjects;
+        System.out.printf("Your CGPA is: %.2f%n", cgpa);
+
+        scanner.close();
+    }
+}
