@@ -1,0 +1,13 @@
+
+public class Student {
+	public static void main(String[] args) {
+		
+		String name ;
+		String matricNo ;
+		double score ;
+	     System.out.println("Name:" );
+		    System.out.println("MatricNo:" + 1);
+		    System.out.println("Score:" + 1);
+		    }
+		
+	}
