@@ -1,0 +1,30 @@
+public class Main {
+	public static void main(String[] args) {
+		
+         balance = 1000;
+
+        Scanner sc = new Scanner(System.in);
+        int option;
+        do {
+            System.out.println("\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit");
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    System.out.println("Balance: $" + balance);
+                    break;
+                case 2:
+                    System.out.print("Amount to deposit: ");
+                    balance += sc.nextDouble();
+                    break;
+                case 3:
+                    System.out.print("Amount to withdraw: ");
+                    double amount = sc.nextDouble();
+[5/9, 8:28 PM] Chatgpt: if (amount= balance) balance = amount;
+                    else System.out.println("Insufficient funds.");
+                    break;
+            }
+        } while (option != 4);
+    }
+}
+
+	
